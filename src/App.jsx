@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react'
 import dividerImg from '/images/pattern-divider-mobile.svg'
-import diceImg from "./images/icon-dice.svg"
+import diceImg from "/images/icon-dice.svg"
 async function getUrl() {
   const advice = await fetch("https://api.adviceslip.com/advice").then(data => data)
   const data = await advice.json()
