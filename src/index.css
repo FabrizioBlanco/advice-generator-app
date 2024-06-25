@@ -1,3 +1,62 @@
 :root {
-  color-scheme: light dark;
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+  --grayishBlue: hsl(217, 19%, 38%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+  --darkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope";
+  font-size: 28px;
+  font-weight: 800;
+}
+
+span {
+  color: var(--neonGreen);
+  letter-spacing: 2px;
+}
+
+.container {
+  position: relative;
+  margin: 15vh 15px;
+  height: 270px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--lightCyan);
+  background-color: var(--darkGrayishBlue);
+  border-radius: 5px;
+}
+
+#divider {
+  width: 250px;
+}
+
+.diceContainer {
+  position: absolute;
+  bottom: -19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neonGreen);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+#dice {
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 700px) {
+  .container{
+    margin: 100px auto;
+    max-width: 500px;
+  }
 }
