@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react'
-import divider from '/images/pattern-divider-mobile.svg'
+import dividerImg from '/images/pattern-divider-mobile.svg'
+import diceImg from "./images/icon-dice.svg"
 async function getUrl() {
   const advice = await fetch("https://api.adviceslip.com/advice").then(data => data)
   const data = await advice.json()
@@ -24,9 +25,9 @@ export default function App() {
     <main className='container'>
       <span id='adviceId'>ADVICE #{adviceId}</span>
       <p id='adviceText'>"{advice}"</p>
-      <img id='divider' src={divider} alt="divider pattern" />
+      <img id='divider' src={dividerImg} alt="divider pattern" />
       <div className='diceContainer' onClick={() => getRandomAdvice()}>
-        <img id="dice" src="public\images\icon-dice.svg" alt="dice" />
+        <img id="dice" src={diceImg} alt="dice" />
       </div>
     </main>
   )
